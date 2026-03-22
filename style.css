@@ -1,0 +1,597 @@
+/* CSS RESET */
+
+*{
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, div {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HTML CSS */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* FONTES */
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.smooch-sans {
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* ANIMAÇÔES */
+
+@keyframes anima {
+    0% {
+        color: darkblue;
+        transform: translateY(-5px);
+    }
+    50% {
+        color: white;
+        transform: translateY(5px);
+    }
+}
+
+/* CSS GERAL */
+
+body {
+    background-color:black;
+}
+
+p, h1, h2, h3, a, span {
+    color: white;
+}
+
+/* CSS TOPO */
+
+#navbar {
+    background-color: #27292b;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0px;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.lista-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    color: black;
+}
+
+.lista-nav a {
+    color: white;
+    position: relative;
+    font-family: "Open Sans";
+    font-size: clamp(14px, 5vw, 20px);
+}
+
+.lista-nav a:hover {
+    color: #0f14a3;
+}
+
+.lista-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 4px;
+    background: #0f14a3;
+    transition: width 0.5s;
+    transform: translateX(-50%);
+}
+
+.lista-nav a:hover::after {
+    width: 80%
+}
+
+#logo {
+    height: auto;
+}
+
+#menu {
+    font-size: 22px;
+}
+
+/* CSS HOME PAGE */
+
+#home {
+     min-height: 100dvh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+#introducao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+#introducao h1 {
+    font-size: clamp(40px, 70vw, 120px);
+    color: #00a2ff;
+    line-height: 0.7;
+    position: relative;
+    text-align: center;
+}
+
+#luz {
+    position: absolute;
+    filter: blur(20px);
+    background: radial-gradient(
+        rgba(0,106,955,0.5),
+        transparent
+        );
+        width: 70vw;
+        height: 150px;
+}
+
+#linha {
+    margin: 10px;
+    margin-top: 0;
+    width: 60vw;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #006aff,
+        transparent
+        );
+}
+
+#infos {
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+#introducao a {
+    margin-top: 10px;
+    font-size: 13px;
+    padding:10px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+#scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#seta {
+    margin: 0px;
+    font-size: 25px;
+    animation-name: anima;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+#introducao a:hover {
+    color: #006aff;
+    border-color: #006aff;
+}
+
+/* SECTION SOBRE MIM CSS */
+
+#sobre {
+    background-color: white;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#sobre h2 {
+    color: black;
+    font-size: 18px;
+    font-family: "Open Sans"
+}
+
+#sobre h3 {
+    color: #006aff;
+    font-size: 50px;
+}
+
+#head-sobre {
+    text-align: center;
+}
+
+#conteudo-sobre {
+    background-color: #cbd2d6;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+#foto {
+    display: flex;
+    justify-content: center;
+}
+
+#foto-perfil {
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+#foto-perfil:hover {
+    transform: scale(1.1);
+    transition: transform 0.6s;
+}
+
+#descricao {
+    margin: 20px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+#nome {
+    display: flex;
+    flex-direction: row;
+}
+
+#nome h3 {
+    font-family: "Smooch Sans";
+    font-size: clamp(20px, 7vw, 60px);
+    margin-bottom: 0px;
+}
+
+#nome h4 {
+    font-family: "Smooch Sans";
+    margin: 3px;
+    font-size: clamp(16px, 7vw, 25px);
+    margin-top: 29px;
+    margin-bottom: 0px;
+}
+
+#perfil p {
+    font-size: clamp(16px, 7vw, 20px);
+    color: black;
+}
+
+/* SECTION CONHECIMENTOS CSS */
+
+#conhecimentos {
+    background-color: #cbd2d6;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#head-conhecimentos {
+    text-align: center;
+}
+
+#head-conhecimentos h2 {
+    color: black;
+    font-size: 18px;
+    font-family: "Rubik Mono One";
+    font-weight: 40;
+}
+
+#tecnologias {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.tecnologia {
+    background-color: #27292b;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    margin: 5px;
+    width: 100%;
+    border: 3px solid darkblue;
+    border-radius: 10px;
+}
+
+.tecnologia i {
+    font-size: 80px;
+    color: darkblue;
+}
+
+.tecnologia h3 {
+    font-family: "Smooch Sans";
+    font-size: 40px;
+}
+
+.tecnologia p {
+    font-family: "Open Sans";
+    font-size: clamp(8px, 10vw, 16px);
+}
+
+.tecnologia:hover {
+    transform: scale(1.1);
+    transition: transform 0.6s;
+}
+
+/* SECTION PROJETOS CSS */
+
+#projetos {
+    background-color: white;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#projetos h2 {
+    color: black;
+    font-size: 18px;
+    font-family: "Rubik Mono One";
+    font-weight: 40;
+}
+
+#head-projetos {
+    text-align: center;
+}
+
+#conteudo-projetos {
+    background-color: #cbd2d6;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.projeto {
+    background-color: #27292b;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    margin: 5px;
+    width: 100%;
+    border: 6px solid darkblue;
+    border-radius: 10px;
+}
+
+.projeto i {
+    font-size: 80px;
+    color: darkblue;
+}
+
+.projeto h3 {
+    font-family: "Smooch Sans";
+    font-size: 40px;
+}
+
+.projeto p {
+    font-family: "Open Sans";
+    font-size: clamp(8px, 10, 16px);
+}
+
+.projeto:hover {
+    transform: scale(1.05);
+    transition: transform 0.6s;
+}
+
+/* SECTION CONTATO CSS */
+
+#head-contato {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#head-contato h2 {
+    color: #006aff;
+    font-size: clamp(50px, 10vw, 90px);
+}
+
+#conteudo-contato {
+    justify-content: center;
+    gap: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    font-family: "Rubik Mono One";
+    font-size: clamp(16px, 5vw, 25px);
+    width: 40%;
+    margin-top: 50px;
+    align-items: center;
+}
+
+#links a {
+    color: darkblue;
+    border: 2px solid rgba(0, 106, 255, 0.2);
+    margin: 2px;
+}
+
+#div-formulario {
+    width: 40%;
+    margin-top: 50px;
+    text-align: left;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    border: 3px solid darkblue;
+    background-color: black;
+    color: lightgrey;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    height: 50px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+#links a:hover {
+    transform: translateX(8px);
+    transition: 0.3s;
+}
+
+button {
+    background-color: darkblue;
+    color: black;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: black;
+    color: darkblue;
+}
+
+#conteudo-contato h3 {
+    margin-bottom: 20px;
+    font-family: "Rubik Mono One";
+    font-size: 20px;
+    font-weight: 40;
+}
+
+/* FOOTER CSS */
+
+footer {
+    margin-top: 50px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+    #conteudo-sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #descricao {
+        margin: 0px;
+    }
+
+    #nome {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nome h4 {
+        margin-top: 0px;
+    }
+
+    #tecnologias {
+        flex-direction: column;
+    }
+
+    .tecnologia {
+        width: 100%;
+    }
+
+    #links {
+        font-size: 15px;
+        width: 50%
+    }
+
+    #links a {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    #conteudo-contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #div-formulario {
+        text-align: center;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+
+    #menu {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 940px) {
+    #conteudo-sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #descricao {
+        margin: 0px;
+    }
+
+    #nome {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nome h4 {
+        margin-top: 0px;
+    }
+
+    #tecnologias {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tecnologia {
+        width: calc(50% - 20px);
+    }
+}
